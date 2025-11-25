@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptionA1 Trading - Intraday Clarity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#1e293b',
+                            accent: '#10b981', // Emerald for WhatsApp/Success
+                            accentDark: '#059669',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Gradient text for emphasis */
+        .text-gradient {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-8 h-8 bg-brand-accent rounded-lg flex items-center justify-center text-white font-bold text-xl">A1</div>
+                    <span class="font-bold text-xl text-slate-900 tracking-tight">OptionA1</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#guidance" class="text-slate-600 hover:text-brand-accent transition-colors font-medium">Guidance</a>
+                    <a href="#structure" class="text-slate-600 hover:text-brand-accent transition-colors font-medium">Structure</a>
+                    <a href="#process" class="text-slate-600 hover:text-brand-accent transition-colors font-medium">Process</a>
+                    <a href="#expertise" class="text-slate-600 hover:text-brand-accent transition-colors font-medium">Expertise</a>
+                    <a href="https://wa.me/918828657392?text=hie%20i%20want%20intraday%20market%20clarity" target="_blank" class="bg-brand-accent hover:bg-brand-accentDark text-white px-5 py-2.5 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Chat Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-accent focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#guidance" class="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 hover:text-brand-accent rounded-md">Guidance</a>
+                <a href="#structure" class="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 hover:text-brand-accent rounded-md">Structure</a>
+                <a href="#process" class="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 hover:text-brand-accent rounded-md">Process</a>
+                <a href="#expertise" class="block px-3 py-3 text-slate-600 font-medium hover:bg-slate-50 hover:text-brand-accent rounded-md">Expertise</a>
+                <a href="https://wa.me/918828657392?text=hie%20i%20want%20intraday%20market%20clarity" target="_blank" class="block w-full text-center mt-4 bg-brand-accent text-white px-5 py-3 rounded-lg font-semibold">
+                    <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-brand-dark">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-20">
+            <!-- Replaced with Trading Chart Background -->
+            <img src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Trading Background" class="w-full h-full object-cover grayscale blur-sm">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/90 via-brand-dark/95 to-brand-dark"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Highlight Line -->
+            <div class="reveal inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
+                <span class="text-brand-accent font-bold text-sm tracking-wide uppercase">Opportunity</span>
+                <span class="w-1 h-1 bg-slate-400 rounded-full"></span>
+                <span class="text-slate-200 text-sm font-medium">💰 Kickstart with ₹50,000</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="reveal text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-tight">
+                Intraday Trading Needs <br>
+                <span class="text-gradient">Clarity. Not Noise.</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="reveal text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Market movement explained simply — directly on WhatsApp.<br>
+                No hype. No confusion. Just clean, practical intraday insights.
+            </p>
+
+            <!-- CTA -->
+            <div class="reveal flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/918828657392?text=hie%20i%20want%20intraday%20market%20clarity" target="_blank" class="group bg-brand-accent hover:bg-brand-accentDark text-white text-lg px-8 py-4 rounded-full font-bold transition-all shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)] flex items-center gap-3">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    Chat on WhatsApp
+                    <i class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Trust indicator -->
+            <div class="reveal mt-12 text-slate-500 text-sm">
+                Trusted by disciplined traders
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Clear Intraday Guidance -->
+    <section id="guidance" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <!-- Content -->
+                <div class="reveal mb-12 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Clear Intraday Guidance</h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        We simplify intraday movement so you understand what's happening and why — without jargon. We strip away the complexity.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-brand-accent mt-1">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-slate-900">Market trend clarity</h3>
+                                <p class="text-slate-600">Identify the direction before making a move.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-brand-accent mt-1">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-slate-900">Direct explanation</h3>
+                                <p class="text-slate-600">Understanding movement & behaviour in real-time.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-brand-accent mt-1">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-slate-900">No signals, no hype</h3>
+                                <p class="text-slate-600">Only pure understanding to build your confidence.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-brand-accent mt-1">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold text-slate-900">1:1 WhatsApp breakdown</h3>
+                                <p class="text-slate-600">Personalized insights for your comfort.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Image -->
+                <div class="reveal relative">
+                    <div class="absolute -inset-4 bg-brand-accent/20 rounded-2xl blur-lg"></div>
+                    <!-- Replaced with Stock Market/Trading Image -->
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chart Analysis" class="relative rounded-2xl shadow-2xl w-full object-cover transform hover:scale-[1.02] transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Structured Approach -->
+    <section id="structure" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                
+                <!-- Image (Left on desktop) -->
+                <div class="reveal order-2 lg:order-1 mb-12 lg:mb-0 relative">
+                     <div class="absolute -inset-4 bg-blue-500/20 rounded-2xl blur-lg"></div>
+                    <!-- Replaced with Digital Trading Analysis Image -->
+                    <img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Disciplined Trading" class="relative rounded-2xl shadow-2xl w-full object-cover transform hover:scale-[1.02] transition-transform duration-500">
+                </div>
+
+                <!-- Content -->
+                <div class="reveal order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Structured Approach,<br>Smooth Execution</h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        Every trader needs a disciplined structure. Learn how pros handle the day efficiently and reduce risk.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-4 mb-2">
+                                <i class="fas fa-shield-alt text-brand-accent text-xl"></i>
+                                <h3 class="text-xl font-semibold text-slate-900">Risk Handling</h3>
+                            </div>
+                            <p class="text-slate-600 pl-9">Intraday risk handling explained simply so you protect capital.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-4 mb-2">
+                                <i class="fas fa-brain text-brand-accent text-xl"></i>
+                                <h3 class="text-xl font-semibold text-slate-900">Smart Behaviour</h3>
+                            </div>
+                            <p class="text-slate-600 pl-9">Deep understanding of position behaviour during volatility.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div class="flex items-center gap-4 mb-2">
+                                <i class="fas fa-user-tie text-brand-accent text-xl"></i>
+                                <h3 class="text-xl font-semibold text-slate-900">Pro Guidance</h3>
+                            </div>
+                            <p class="text-slate-600 pl-9">Indirect guidance on professional methods used by institutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Fast, Personal & Straightforward -->
+    <section id="process" class="py-24 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="reveal text-3xl md:text-4xl font-bold mb-4">Fast, Personal & Straightforward</h2>
+                <p class="reveal text-slate-400 max-w-2xl mx-auto">Get connected to clarity in four simple steps.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line (Desktop) -->
+                <div class="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-slate-700 -z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="reveal bg-slate-800 p-8 rounded-2xl border border-slate-700 relative z-10 hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-14 h-14 bg-brand-accent rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6 shadow-lg mx-auto lg:mx-0">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center lg:text-left">Tap WhatsApp</h3>
+                    <p class="text-slate-400 text-sm text-center lg:text-left">Click the button to start a chat instantly.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="reveal bg-slate-800 p-8 rounded-2xl border border-slate-700 relative z-10 hover:-translate-y-2 transition-transform duration-300 delay-100">
+                    <div class="w-14 h-14 bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6 shadow-lg mx-auto lg:mx-0">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center lg:text-left">Auto-message</h3>
+                    <p class="text-slate-400 text-sm text-center lg:text-left">An automated welcome message goes instantly.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="reveal bg-slate-800 p-8 rounded-2xl border border-slate-700 relative z-10 hover:-translate-y-2 transition-transform duration-300 delay-200">
+                    <div class="w-14 h-14 bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6 shadow-lg mx-auto lg:mx-0">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center lg:text-left">Expert Connects</h3>
+                    <p class="text-slate-400 text-sm text-center lg:text-left">A real market expert connects with you personally.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="reveal bg-slate-800 p-8 rounded-2xl border border-slate-700 relative z-10 hover:-translate-y-2 transition-transform duration-300 delay-300">
+                    <div class="w-14 h-14 bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-white mb-6 shadow-lg mx-auto lg:mx-0">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center lg:text-left">Full Clarity</h3>
+                    <p class="text-slate-400 text-sm text-center lg:text-left">Get the insights you need before taking decisions.</p>
+                </div>
+            </div>
+
+            <div class="reveal mt-16 text-center">
+                <a href="https://wa.me/918828657392?text=hie%20i%20want%20intraday%20market%20clarity" target="_blank" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-accentDark text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg">
+                    <i class="fab fa-whatsapp text-xl"></i> Connect on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Company USP -->
+    <section id="expertise" class="relative py-24 bg-slate-50 overflow-hidden">
+        <!-- Decorative Pattern -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-green-100 opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 rounded-full bg-blue-100 opacity-50 blur-3xl"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="reveal inline-block mb-6">
+                <span class="bg-white border border-slate-200 px-4 py-2 rounded-full text-sm font-bold text-slate-500 tracking-widest uppercase shadow-sm">Experience Matters</span>
+            </div>
+            <h2 class="reveal text-4xl md:text-5xl font-bold text-slate-900 mb-8">10 Years of Expert Advisory</h2>
+            <p class="reveal text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+                A decade of market analysis and advisory gives you actionable insights and deep understanding of intraday dynamics. Reliable clarity, every time.
+            </p>
+            
+            <!-- Stats Row -->
+            <div class="reveal mt-12 flex flex-wrap justify-center gap-8 md:gap-16">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-brand-accent mb-1">10+</div>
+                    <div class="text-sm text-slate-500 font-medium uppercase">Years Exp</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-brand-accent mb-1">24/7</div>
+                    <div class="text-sm text-slate-500 font-medium uppercase">Support</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-brand-accent mb-1">100%</div>
+                    <div class="text-sm text-slate-500 font-medium uppercase">Clarity</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Call to Action + Minimal Section Combo -->
+    <section class="bg-white">
+        <!-- Main CTA -->
+        <div class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-primary rounded-3xl p-8 md:p-16 text-center shadow-2xl overflow-hidden relative">
+                <!-- Background Blobs -->
+                <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+                    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+                </div>
+
+                <div class="relative z-10">
+                    <h2 class="reveal text-3xl md:text-5xl font-bold text-white mb-6">
+                        Intraday clarity makes <br>intraday decisions smarter.
+                    </h2>
+                    <p class="reveal text-slate-300 text-lg mb-10">Start the conversation now.</p>
+                    
+                    <a href="https://wa.me/918828657392?text=hie%20i%20want%20intraday%20market%20clarity" target="_blank" class="reveal inline-block bg-brand-accent hover:bg-brand-accentDark text-white text-lg px-10 py-4 rounded-full font-bold transition-transform hover:scale-105 shadow-lg">
+                        Message on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Minimal High-Contrast Bar -->
+        <div class="bg-brand-accent w-full py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <div>
+                    <h3 class="text-white font-bold text-xl md:text-2xl">One Message → Instant Market Understanding</h3>
+                    <p class="text-green-100 text-sm font-medium">Short, clear, conversion-driven.</p>
+                </div>
+                <a href="https://wa.me/918828657392?text=hie%20i%20want%20intraday%20market%20clarity" target="_blank" class="bg-white text-brand-accent hover:bg-slate-100 px-6 py-2 rounded-full font-bold shadow-md transition-colors whitespace-nowrap">
+                    WhatsApp Now <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <div class="w-6 h-6 bg-slate-700 rounded flex items-center justify-center text-white font-bold text-xs">A1</div>
+                    <span class="font-bold text-white">OptionA1 Trading</span>
+                </div>
+                <p class="text-sm">Intraday Market Clarity</p>
+            </div>
+
+            <div class="text-center md:text-right text-xs max-w-md">
+                <p class="mb-2">©️ 2025 OptionA1 Trading. All rights reserved.</p>
+                <p class="text-slate-600 leading-snug">
+                    Disclaimer: Trading involves risk and is not suitable for all investors. The information provided is for educational purposes only and does not constitute financial advice.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const nav = document.getElementById('navbar');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll Animation using Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md', 'bg-white/95');
+                nav.classList.remove('bg-white/90');
+            } else {
+                nav.classList.remove('shadow-md', 'bg-white/95');
+                nav.classList.add('bg-white/90');
+            }
+        });
+    </script>
+</body>
+</html>
